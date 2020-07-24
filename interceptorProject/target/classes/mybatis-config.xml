@@ -3,8 +3,7 @@
 <configuration>
 
 	<typeAliases>
-		<package name="com.mvc.vo.MemberVo"/>
-		<package name="com.mvc.vo.LogDataVO"/>
+		<package name="com.mvc.project.vo.LoginVo"/>
 	</typeAliases>
 
 </configuration>

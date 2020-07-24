@@ -1,0 +1,10 @@
+반영 사항
+
+1. 현제 프로젝트 실행하면 에러가 납니다.
+	해결 방법 : 
+	loginController에 있는 scheduler 호출 하는 내용을 지워주시고
+	bat.JobScheduler.scheduler가 파라미터로 받고있는 vo를 지워 주시면 정상 작동 됩니다.
+	
+2. 이전 버젼과 차이점
+	mvc 패턴 구현 했습니다.
+	logger(logback) 적용 하였습니다.

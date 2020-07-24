@@ -1,4 +1,4 @@
-package com.mvc.interceptor;
+package com.mvc.project.interceptor;
 
 import java.text.DateFormat;
 import java.util.ArrayList;
@@ -10,12 +10,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 public class LoginInterceptor extends HandlerInterceptorAdapter {
 	
-	protected Log log = LogFactory.getLog(LoginInterceptor.class);
+	protected Logger logger = LoggerFactory.getLogger(this.getClass());
 	protected Date date = new Date();
 	protected DateFormat format = DateFormat.getDateInstance(DateFormat.FULL);
 	
@@ -35,12 +37,12 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 		String logindate = format.format(date);
 		
 		if (id != null && pw != null) {
-			log.debug("============================== PostHandle ==============================");
-			log.info(" Class       \t:  " + handler.getClass());
-			log.info(" Request URI \t:  " + request.getRequestURI());
-			log.info(" Servlet URI \t:  " + request.getServletPath());
-			log.info(" 접속 id : " + request.getParameter("id") + " / 접속 id pw : " + request.getParameter("pw") + " 접속시간 :" + format.format(date));
-			log.info("==================================================================== ");
+			logger.debug("============================== PostHandle ==============================");
+			logger.info(" Class       \t:  " + handler.getClass());
+			logger.info(" Request URI \t:  " + request.getRequestURI());
+			logger.info(" Servlet URI \t:  " + request.getServletPath());
+			logger.info(" 접속 id : " + request.getParameter("id") + " / 접속 id pw : " + request.getParameter("pw") + " 접속시간 :" + format.format(date));
+			logger.info("==================================================================== ");
 
 		}
 		

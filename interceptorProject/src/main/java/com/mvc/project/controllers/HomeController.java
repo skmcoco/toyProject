@@ -1,4 +1,4 @@
-package com.mvc.controllers;
+package com.mvc.project.controllers;
 
 import java.text.DateFormat;
 import java.util.Date;
