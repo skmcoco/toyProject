@@ -8,3 +8,9 @@
 2. 이전 버젼과 차이점
 	mvc 패턴 구현 했습니다.
 	logger(logback) 적용 하였습니다.
+	
+07/25
+
+에러 해결 
+
+JobScheduler 쪽에 간접 접근하여, data 들을 vos에 넣는 방식으로 해결

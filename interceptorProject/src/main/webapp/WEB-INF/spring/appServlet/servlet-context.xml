@@ -27,9 +27,8 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.mvc.project" />
+	<context:component-scan base-package="com.mvc.project.*" />
 	
-	<context:component-scan base-package="com.mvc.project.bat" />
 	<beans:bean id="JobScheduler" class="com.mvc.project.bat.JobScheduler"></beans:bean>
 	<task:scheduler id="scheduler" pool-size="10"/>
 	<task:annotation-driven scheduler="scheduler"/>
